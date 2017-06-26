@@ -14,8 +14,8 @@ class HardCoded(object):
     MAIL_EXCEPTION_THROTTLE = 24 * 60 * 60
     _SQLALCHEMY_DATABASE_DATABASE = 'pypi_portal'
     _SQLALCHEMY_DATABASE_HOSTNAME = 'localhost'
-    _SQLALCHEMY_DATABASE_PASSWORD = 'pypi_p@ssword'
-    _SQLALCHEMY_DATABASE_USERNAME = 'pypi_service'
+    _SQLALCHEMY_DATABASE_PASSWORD = ''
+    _SQLALCHEMY_DATABASE_USERNAME = 'root'
 
 
 class CeleryConfig(HardCoded):
@@ -31,7 +31,8 @@ class CeleryConfig(HardCoded):
     CELERY_TASK_RESULT_EXPIRES = 10 * 60  # Dispose of Celery Beat results after 10 minutes.
     CELERY_TASK_SERIALIZER = 'json'
     CELERY_TRACK_STARTED = True
-
+    CELERY_BROKER_URL = 'redis://localhost:6379/0'
+    CELERY_RESULT_BACKEND = 'redis://localhost:6379/0'
     CELERYBEAT_SCHEDULE = {
         'pypy-every-day': dict(task='pypi.update_package_list', schedule=crontab(hour='0')),
     }

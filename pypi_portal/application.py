@@ -5,7 +5,7 @@ import locale
 import os
 
 from flask import Flask
-from flask.ext.statics import Statics
+from flask_statics import Statics
 from yaml import load
 
 import pypi_portal as app_root

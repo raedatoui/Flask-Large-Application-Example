@@ -5,7 +5,7 @@ import hashlib
 from logging import getLogger
 
 from flask import current_app
-from flask.ext.mail import Message
+from flask_mail import Message
 from werkzeug.debug import tbtools
 
 from pypi_portal.extensions import mail, redis

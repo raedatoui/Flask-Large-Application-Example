@@ -1,5 +1,5 @@
 from flask import current_app
-from flask.ext.celery import CELERY_LOCK
+from flask_celery import CELERY_LOCK
 import pytest
 from redis.exceptions import LockError
 

@@ -4,7 +4,7 @@ from distutils.version import LooseVersion
 from logging import getLogger
 import xmlrpclib
 
-from flask.ext.celery import single_instance
+from flask_celery import single_instance
 
 from pypi_portal.extensions import celery, db, redis
 from pypi_portal.models.pypi import Package

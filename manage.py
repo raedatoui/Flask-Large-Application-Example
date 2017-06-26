@@ -61,7 +61,7 @@ from celery.app.log import Logging
 from celery.bin.celery import main as celery_main
 from docopt import docopt
 import flask
-from flask.ext.script import Shell
+from flask_script import Shell
 from tornado import httpserver, ioloop, web, wsgi
 
 from pypi_portal.application import create_app, get_config

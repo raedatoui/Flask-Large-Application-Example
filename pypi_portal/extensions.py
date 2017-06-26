@@ -6,10 +6,11 @@ To avoid circular imports with views and create_app(), extensions are instantiat
 
 from logging import getLogger
 
-from flask.ext.celery import Celery
-from flask.ext.mail import Mail
-from flask.ext.redis import Redis
-from flask.ext.sqlalchemy import SQLAlchemy
+from flask_celery import Celery
+from flask_mail import Mail
+from flask_redis import Redis
+from flask_sqlalchemy import SQLAlchemy
+
 from sqlalchemy.event import listens_for
 from sqlalchemy.pool import Pool
 
