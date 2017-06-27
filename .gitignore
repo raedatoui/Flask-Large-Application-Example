@@ -56,3 +56,4 @@ docs/_build/
 pypi_portal/*/flask_statics_helper
 
 .idea
+.DS_Store
