@@ -47,6 +47,7 @@ class Config(CeleryConfig):
     MAIL_DEFAULT_SENDER = 'admin@demo.test'
     MAIL_SUPPRESS_SEND = True
     REDIS_URL = 'redis://localhost/0'
+    SQLALCHEMY_TRACK_MODIFICATIONS = False
     SQLALCHEMY_DATABASE_URI = property(lambda self: 'mysql://{u}:{p}@{h}/{d}'.format(
         d=quote_plus(self._SQLALCHEMY_DATABASE_DATABASE), h=quote_plus(self._SQLALCHEMY_DATABASE_HOSTNAME),
         p=quote_plus(self._SQLALCHEMY_DATABASE_PASSWORD), u=quote_plus(self._SQLALCHEMY_DATABASE_USERNAME)
