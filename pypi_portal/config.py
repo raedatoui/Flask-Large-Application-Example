@@ -31,8 +31,8 @@ class CeleryConfig(HardCoded):
     CELERY_TASK_RESULT_EXPIRES = 10 * 60  # Dispose of Celery Beat results after 10 minutes.
     CELERY_TASK_SERIALIZER = 'json'
     CELERY_TRACK_STARTED = True
-    CELERY_BROKER_URL = 'amqp://guest@localhost'
-    CELERY_RESULT_BACKEND = 'amqp://guest@localhost'
+    CELERY_BROKER_URL = 'redis://localhost:6379/0'
+    CELERY_RESULT_BACKEND = 'redis://localhost:6379/0'
     CELERYBEAT_SCHEDULE = {
         'pypy-every-day': dict(task='pypi.update_package_list', schedule=crontab(hour='0')),
     }
